@@ -56,11 +56,11 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/TestTetrisMobileUI.loader.js";
+      var loaderUrl = buildUrl + "/Test.loader.js";
       var config = {
-        dataUrl: buildUrl + "/TestTetrisMobileUI.data.unityweb",
-        frameworkUrl: buildUrl + "/TestTetrisMobileUI.framework.js.unityweb",
-        codeUrl: buildUrl + "/TestTetrisMobileUI.wasm.unityweb",
+        dataUrl: buildUrl + "/Test.data.unityweb",
+        frameworkUrl: buildUrl + "/Test.framework.js.unityweb",
+        codeUrl: buildUrl + "/Test.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "Teste",
@@ -89,7 +89,7 @@
         // performance, uncomment the following line:
         // config.devicePixelRatio = 1;
 
-        //unityShowBanner('WebGL builds are not supported on mobile devices.');
+        unityShowBanner('WebGL builds are not supported on mobile devices.');
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
@@ -98,7 +98,7 @@
       }
 
       loadingBar.style.display = "block";
-	  
+
       var script = document.createElement("script");
       script.src = loaderUrl;
       script.onload = () => {
@@ -115,19 +115,5 @@
       };
       document.body.appendChild(script);
     </script>
-	<script>
-    function detectDevice() {
-        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-            return "mobile";
-        } else {
-            return "pc";
-        }
-    }
-
-    function informUnityOfDeviceType() {
-        var deviceType = detectDevice();
-        gameInstance.SendMessage('GameManager', 'InformDeviceType', deviceType);
-    }
-</script>
   </body>
 </html>
