@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Bis na CCXP</title>
+    <title>Unity WebGL Player | BisCCXP</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
@@ -18,9 +18,9 @@
       </div>
       <div id="unity-warning"> </div>
       <div id="unity-footer">
-        <!--<div id="unity-webgl-logo"></div>-->
+        <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
-        <!--<div id="unity-build-title">Bis na CCXP</div>-->
+        <div id="unity-build-title">BisCCXP</div>
       </div>
     </div>
     <script>
@@ -56,14 +56,14 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/26.loader.js";
+      var loaderUrl = buildUrl + "/2ndOfOctoberBuild.loader.js";
       var config = {
-        dataUrl: buildUrl + "/26.data.unityweb",
-        frameworkUrl: buildUrl + "/26.framework.js.unityweb",
-        codeUrl: buildUrl + "/26.wasm.unityweb",
+        dataUrl: buildUrl + "/2ndOfOctoberBuild.data.unityweb",
+        frameworkUrl: buildUrl + "/2ndOfOctoberBuild.framework.js.unityweb",
+        codeUrl: buildUrl + "/2ndOfOctoberBuild.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DXGameworks",
-        productName: "Bis na CCXP",
+        productName: "BisCCXP",
         productVersion: "1.0",
         showBanner: unityShowBanner,
       };
@@ -87,14 +87,9 @@
         // To lower canvas resolution on mobile devices to gain some
         // performance, uncomment the following line:
         // config.devicePixelRatio = 1;
-		if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-			canvas.style.width = '100%';
-			canvas.style.height = '100%';
-		} else 
-		{
-			canvas.style.width = window.innerWidth + 'px';
-			canvas.style.height = window.innerHeight + 'px';
-		}
+
+        canvas.style.width = window.innerWidth + 'px';
+        canvas.style.height = window.innerHeight + 'px';
 
         watchScreen();
       } else {
