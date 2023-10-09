@@ -91,7 +91,7 @@
         canvas.style.width = '100%';//window.innerWidth + 'px';
         canvas.style.height = '100%';//window.innerHeight + 'px';
 
-        watchScreen();
+        //watchScreen();
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
@@ -108,9 +108,9 @@
           progressBarFull.style.width = 100 * progress + "%";
         }).then((unityInstance) => {
           loadingBar.style.display = "none";
-          fullscreenButton.onclick = () => {
+          /*fullscreenButton.onclick = () => {
             unityInstance.SetFullscreen(1);
-          };
+          };*/
         }).catch((message) => {
           alert(message);
         });
@@ -119,7 +119,7 @@
 
       var sWidth = window.innerWidth;
       var sHeight = window.innerHeight;
-      function watchScreen() {
+      /*function watchScreen() {
         requestAnimationFrame(watchScreen);
         if (sWidth !== window.innerWidth || sHeight != window.innerHeight) {
           // Dispatching the standard orientationchange event
@@ -130,7 +130,7 @@
           canvas.style.width = sWidth + 'px';
           canvas.style.height = sHeight + 'px';
         }
-      }
+      }*/
     </script>
   </body>
 </html>
